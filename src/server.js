@@ -20,7 +20,7 @@ mongoose.connect('mongodb+srv://oministack:oministack@cluster0-c4zgm.mongodb.net
   useNewUrlParser: true
 });
 
-app.use((req, res) => {
+app.use((req, res, next) => {
   req.io = io
 
   return next()
